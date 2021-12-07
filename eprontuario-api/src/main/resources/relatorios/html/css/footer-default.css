@@ -1,0 +1,16 @@
+.rodape {
+    padding: 0 10px;
+    color: #555555;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.rodape .linha {
+    display: flex;
+    padding-right: 5px;
+}
+
+.rodape .linha b {
+    padding-right: 5px;
+}
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="pedroFernando" id="0.0.0-tagdatabase">
+        <tagDatabase tag="0.0.0"/>
+    </changeSet>
+
+    <!-- Carga Inicial -->
+    <changeSet author="pedroFernando" id="0.0.0-00-criacao-das-tabelas">
+        <sqlFile encoding="utf8" path="0.0.0/01_criacao_tabela_modelo_documento.sql"
+                 relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"
+        />
+        <sqlFile encoding="utf8" path="0.0.0/02_criacao_tabela_modelo_item_documento.sql"
+                 relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"
+        />
+        <sqlFile encoding="utf8" path="0.0.0/03_criacao_tabela_valor_fixo.sql"
+                 relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"
+        />
+    </changeSet>
+
+    <changeSet author="pedroFernando" id="0.0.1-01-carga-inicial-modelo-documento">
+        <sqlFile encoding="utf8" path="0.0.1/01_carga_inicial_modelo_documento.sql"
+                 relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"
+        />
+    </changeSet>
+
+    <changeSet author="pedroFernando" id="0.0.1-02-carga-inicial-item-modelo-doc">
+        <sqlFile encoding="utf8" path="0.0.1/02_carga_inicial_modelo_item_documento_adimissao.sql"
+                 relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"
+        />
+        <sqlFile encoding="utf8" path="0.0.1/03_carga_inicial_modelo_item_documento_alta.sql"
+                 relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"
+        />
+
+    </changeSet>
+
+<!--    TODO MUDAR NÚMERO DA CARGA DO VALOR INICIAL-->
+    <changeSet author="pedroFernando" id="0.0.1-carga-inicial-valor_fixo.sql">
+        <sqlFile encoding="utf8" path="0.0.1/--_carga_inicial_valor_fixo.sql"
+                 relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"
+        />
+    </changeSet>
+
+
+</databaseChangeLog>

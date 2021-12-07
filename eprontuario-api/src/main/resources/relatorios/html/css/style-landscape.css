@@ -1,0 +1,98 @@
+@page {
+    size: A4 landscape;
+
+    margin-left: 2cm;
+    margin-top: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 2cm;
+
+    @top-right {
+        content: element(header-logo-paginacao);
+    }
+
+    @bottom-left {
+        content: element(footer-texto-proposto);
+    }
+}
+
+.new_page{
+    page-break-after: always;
+}
+
+.header {
+    margin-top: 0.3cm;
+}
+
+.footer {
+    position: running(footer-texto-proposto);
+    display: block;
+    margin-bottom: 0.5cm;
+}
+
+#pagenumber:before {
+    content: counter(page);
+}
+
+#pagecount:before {
+    content: counter(pages);
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.corpo {
+    padding: 0 10px;
+    color: #555555;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.corpo .linha {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.corpo .linha b {
+    padding-right: 5px;
+}
+
+.corpo .tabela {
+    width: 100% !important;
+}
+
+.corpo .tabela tr th {
+    padding: 5px 10px;
+    background-color: #aaaaaa;
+}
+
+.corpo .tabela tr {
+    margin-bottom: 10px;
+}
+
+.corpo .tabela tr td {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.corpo .tabela-interna {
+    padding-left: 40px;
+    width: 100% !important;
+}
+
+.tabela-interna tr th {
+    padding: 5px 10px;
+    background-color: white !important;
+}
+
+.corpo .tabela-interna tr td {
+    border: none !important;
+}

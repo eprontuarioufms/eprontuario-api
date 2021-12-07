@@ -1,0 +1,26 @@
+html {
+    color: #555555;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9px;
+    line-height: 2;
+}
+
+body {
+    margin: 0;
+}
+
+.tabela-dados {
+    width: 100%;
+}
+
+.tabela-dados tr {
+    width: 100%;
+}
+
+.tabela-dados tr td {
+    width: 50%;
+}
+
+.tabela-dados tr td b {
+    padding-right: 5px;
+}

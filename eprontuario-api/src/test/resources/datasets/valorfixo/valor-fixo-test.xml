@@ -1,0 +1,13 @@
+<dataset>
+
+    <TB_VALOR_FIXO VF_ID="1" VF_CHAVE="Remédio" VF_VALOR="Dipirona"/>
+    <TB_VALOR_FIXO VF_ID="2" VF_CHAVE="Remédio" VF_VALOR="Paracetamol"/>
+    <TB_VALOR_FIXO VF_ID="3" VF_CHAVE="Remédio" VF_VALOR="Acetilprocainamida"/>
+    <TB_VALOR_FIXO VF_ID="4" VF_CHAVE="Remédio" VF_VALOR="Aclidínio"/>
+    <TB_VALOR_FIXO VF_ID="5" VF_CHAVE="Remédio" VF_VALOR="Amoxicilina"/>
+
+    <TB_VALOR_FIXO VF_ID="6" VF_CHAVE="Tamanho" VF_VALOR="Pequeno"/>
+    <TB_VALOR_FIXO VF_ID="7" VF_CHAVE="Tamanho" VF_VALOR="Médio"/>
+    <TB_VALOR_FIXO VF_ID="8" VF_CHAVE="Tamanho" VF_VALOR="Grande"/>
+
+</dataset>

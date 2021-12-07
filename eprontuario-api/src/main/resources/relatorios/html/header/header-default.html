@@ -1,0 +1,13 @@
+<div th:fragment="header-default" xmlns:th="http://www.w3.org/1999/xhtml">
+    <table class="tabela-dados" cellspacing="0" cellpadding="0">
+        <tr>
+            <td style="text-align: left;"><b>Data de impressão:</b><span th:text="${DATA_GERACAO_RELATORIO}"/> <span th:text="${HORA_GERACAO_RELATORIO}"/></td>
+            <td style="text-align: right;"><b>Página:</b><span id="pagenumber"></span> de <span id="pagecount"></span>
+            </td>
+        </tr>
+    </table>
+    <div style="width: 100%; text-align: center; line-height: 1!important;">
+<!--        <img class="logo" th:src="|data:image/png;base64,${logoRelatorio}|" alt="Logo do cliente"/>-->
+        <div style="font-size: 16px; margin-top: 5px"><b><span th:text="${TITULO_RELATORIO}"/></b></div>
+    </div>
+</div>

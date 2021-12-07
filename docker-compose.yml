@@ -1,0 +1,66 @@
+version: '3.1'
+services:
+  #  sonarqube:
+  #    image: sonarqube
+  #    ports:
+  #      - 9000:9000
+
+  portainer:
+    image: portainer/portainer:latest
+    ports:
+      - 9001:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainerdata:/data
+#    networks:
+#      - e-prontuario-network
+
+
+  postgreSQL:
+    image: postgres
+
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - /srv/docker/postgresql:/var/lib/postgresql
+    ports:
+      - ${DB_PORT}:5432
+    networks:
+      - e-prontuario-network
+
+  api:
+    build: eprontuario-api
+    image: springio/gs-spring-boot-docker
+    command: 'mvn package'
+    depends_on:
+      - postgreSQL
+    container_name: eprontuario-api
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
+    networks:
+      - e-prontuario-network
+
+  # frontend:
+  #   build: eprontuario-app
+  #   depends_on:
+  #     - api
+  #   container_name: eprontuario-app
+  #   ports:
+  #     - 3000:3000
+  #   networks:
+  #     - e-prontuario-network
+
+
+
+volumes:
+  portainerdata:
+
+networks:
+  e-prontuario-network:
+    driver: bridge
+    
+

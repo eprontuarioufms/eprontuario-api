@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/header-default.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/footer-default.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/style-portrait.css"/>
+    <style type="text/css">
+        html {
+            font-size: 12px;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+
+<div th:include="${templateHeader}::header-default" class="header"></div>
+<table class="tabela-dados" cellspacing="0" cellpadding="0" style="margin-top: 30px">
+    <tr>
+        <td style="text-align: left;"><b>Usuário:</b><span th:text="${usuario}"></span></td>
+    </tr>
+    <tr>
+        <td style="text-align: left;"><b>Enfermeiro:</b><span th:text="${usuario}"></span></td>
+    </tr>
+    <tr>
+        <td style="text-align: left;"><b>Paciente:</b><span th:text="${usuario}"></span></td>
+    </tr>
+    <th:block>
+        <tr style="margin-top: 1cm; background-color: #cccccc; width: 100%!important;">
+            <td style="text-align: left; width: 100%!important; padding-left: 24px" colspan="2"><b>Rol de Valores</b>
+               asdfasdfasdf
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">01 - Saldo do mês anterior</td>
+            <td style="text-align: right;">R$ </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">02 - Entradas</td>
+        </tr>
+        <tr>
+            <td style="text-align: left; padding-left: 24px !important;">Total de entradas</td>
+            <td style="text-align: right;">R$ </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">03 - Subtotal (01 + 02)</td>
+            <td style="text-align: right;">R$ </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">04 - Saídas</td>
+        </tr>
+
+        <tr>
+            <td style="text-align: left; padding-left: 24px !important;">Total de saídas</td>
+            <td style="text-align: right;">R$ </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">05 - Valor do estoque (03 - 04)</td>
+            <td style="text-align: right;">R$ </td>
+        </tr>
+        <tr>
+            <td style="padding: 10px"></td>
+        </tr>
+    </th:block>
+    <tr>
+        <td colspan="2">Declaro que nesta data o estoque importa em:</td>
+    </tr>
+    <tr>
+        <td style="padding: 30px"></td>
+    </tr>
+    <tr>
+        <td colspan="2">Declaro que os valores contantes do presente Demonstrativo Mensal de Operações - DMO, estão
+            corretos e em conformidade com os documentos respectivos, que se encontram arquivos no Núcleo de
+            Almoxarifado.
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 10px"></td>
+    </tr>
+    <tr>
+        <td colspan="2">Em, ____/____/________
+        </td>
+    </tr>
+</table>
+<div th:include="${templateFooter}::footer-default" class="footer"></div>
+</body>
+</html>
